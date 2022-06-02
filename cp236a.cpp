@@ -7,35 +7,27 @@ using namespace std;
 
 int main()
 {
-    int i, j, count=0, val1, val2;
-    int arr[5][5];
-    for (i = 0; i < 5; i++)
-        for (j = 0; j < 5; j++)	
-            cin >> arr[i][j];
-
-    for (i = 0; i < 5; i++)
-    {
-        for (j = 0; j < 5; j++)
-            if(arr[i][j]==1){
-				val1=i;
-				val2=j;
-    			break;
-            }
-    }
-    			
-
-    // cout<<val1<<val2<<endl;
-    val1++;val2++;
-    if(val1>3)
-    	count+=(val1-3);
-    else 
-    	count+=(3-val1);
-    if(val2>3)
-    	count+=(val2-3);
-    else 
-    	count+=(3-val2);
-
-	cout<<count<<endl;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
     
+    int count=0;
+    string s;
+    cin>>s;
+
+    map<char, int> m;
+
+    for (int i = 0; i < s.size(); ++i)
+    {
+    	m.insert(pair<char, int> (s[i], 0));    	
+    }
+
+    for(auto it:m){
+    	count++;
+    }
+    if(count%2==0)
+    	cout<<"CHAT WITH HER!"<<endl;
+    else
+    	cout<<"IGNORE HIM!"<<endl;
+
     return 0;
 }

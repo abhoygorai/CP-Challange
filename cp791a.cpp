@@ -5,24 +5,17 @@ using namespace std;
 #define ll long long
 #define tk(n) int n;cin>>n;
 
-
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    
-    map<char, int> l;
-    pair<char, int>p;
-    p.first ='a';
-    p.second= 1;
-    l.insert(p);
-    p.first ='b';
-    p.second= 1;
-    l.insert(p);
-
-
-    for(auto x:l){
-        cout<<x.first<<" "<<x.second<<endl;
+    int a, b, count=0;
+    cin>>a>>b;
+    while(a<=b){
+    	count++;
+    	a*=3;
+    	b*=2;
     }
+    cout<<count<<endl;
     return 0;
 }
