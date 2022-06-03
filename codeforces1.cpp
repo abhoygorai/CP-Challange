@@ -5,12 +5,26 @@ using namespace std;
 #define ll long long
 #define tk(n) int n;cin>>n;
 
+void Solve(){
+    ll int n, ans=0;
+    cin>>n;
+    while(!((n&ans) >0 && (n^ans)>0)){
+    	ans++;
+    }
+    cout<<ans<<endl;
+
+}
+
 
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    unsigned long long int n=(10000000000000000000^1);
-    cout<<n;
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        Solve();
+    }
     return 0;
 }
