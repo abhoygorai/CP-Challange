@@ -6,14 +6,23 @@ using namespace std;
 #define tk(n) int n;cin>>n;
 
 
+
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+    
+    int count=1, dummy;
+    cin>>dummy;
     string s;
     cin>>s;
-    if(s[0]>=97 && s[0]<=122)
-    	s[0]-=32;
-    cout<<s<<endl;
+
+    for (int i = 0; i < s.size(); i+=count)
+    {
+    	count++;
+    	cout<<s[i];
+    }
+    cout<<endl;
+
     return 0;
 }

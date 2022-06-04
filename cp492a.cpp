@@ -5,15 +5,22 @@ using namespace std;
 #define ll long long
 #define tk(n) int n;cin>>n;
 
-
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    string s;
-    cin>>s;
-    if(s[0]>=97 && s[0]<=122)
-    	s[0]-=32;
-    cout<<s<<endl;
+    int n, sum=0, i=0;
+    cin>>n;
+    if(n==1)
+    	cout<<1<<endl;
+    else{
+
+	    do{
+			i++;
+			sum+=((i*(i+1))/2);
+	    }while(sum<=n);
+	    
+	    cout<<i-1<<endl;
+    }
     return 0;
 }
