@@ -1,19 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct _in {
-    template<class T> operator T() {
-        T x;
-        cin >> x;
-        return x;
-    }
-} in;
+#define rep(i, n) for (int i = 0; i < n; i++)
+#define ll long long
+#define tk(n) int n;cin>>n;
 
-int main() {
-    vector a(in, 0.0);
-    for (auto& x : a) x = in;
-    string s = in;
-    cout << s << ' ' << a[2] << '\n';
+
+int main()
+{
+    int n = 5;
+    
+
 
     return 0;
 }
