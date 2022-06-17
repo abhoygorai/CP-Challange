@@ -6,27 +6,13 @@ using namespace std;
 #define tk(n) int n;cin>>n;
 
 void Solve(){
-    int n, sum=0, sum2 = 0;
-    cin>>n;
-    
-    if((n/2)%2 !=0){
-    	cout<<"NO"<<endl;
-    	return;
-    }
-    cout<<"YES"<<endl;
-    for (int i = 2; i <= n; i+=2)
-    {
-    	cout<<i<<" ";
-    	sum+=i;
-    }
+    int a, b;
+    cin>>a>>b;
 
-    for (int i = 1; i < n-1; i+=2)
-    {
-    	cout<<i<<" ";
-    	sum2 +=i;
-    }
-    cout<<sum-sum2<<endl;
-
+    if(a%b == 0)
+    	cout<<0<<endl;
+    else
+		cout<<b-(a%b)<<endl;    
 
 }
 

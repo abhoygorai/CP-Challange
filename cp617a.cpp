@@ -6,27 +6,13 @@ using namespace std;
 #define tk(n) int n;cin>>n;
 
 void Solve(){
-    int n, sum=0, sum2 = 0;
+    int n;
     cin>>n;
     
-    if((n/2)%2 !=0){
-    	cout<<"NO"<<endl;
-    	return;
-    }
-    cout<<"YES"<<endl;
-    for (int i = 2; i <= n; i+=2)
-    {
-    	cout<<i<<" ";
-    	sum+=i;
-    }
-
-    for (int i = 1; i < n-1; i+=2)
-    {
-    	cout<<i<<" ";
-    	sum2 +=i;
-    }
-    cout<<sum-sum2<<endl;
-
+    if(n%5 == 0)
+    	cout<<n/5<<endl;
+    else
+    	cout<<n/5 + 1<<endl;
 
 }
 
@@ -41,11 +27,7 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     
-    int t;
-    cin>>t;
-    while(t--)
-    {
-        Solve();
-    }
+    Solve();
+    
     return 0;
 }
